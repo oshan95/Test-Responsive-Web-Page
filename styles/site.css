@@ -1,0 +1,157 @@
+img{
+    width: 200px;
+    height: 150px;
+}
+section, #lili, aside{
+    display: inline-block;
+}
+
+header, nav, footer{
+    flex: 1 100%;
+}
+
+main{
+    flex-grow: 2;
+    flex-basis: 66%;
+}
+aside{
+    flex-grow: 1;
+    flex-basis: 33%;
+}
+
+/* Media queries for desktop devices */
+@media screen and (min-width:680px){
+    aside{
+        /* width: 33%; */
+        background-color: aquamarine;
+    }
+    #showslisting{
+        background-color: blueviolet;
+        /* width: 66%; */
+    }
+    .showdescription{
+        white-space: normal;
+        width: 125px;
+        background-color: coral;
+    }
+}
+
+/* Media queris for moblie devices */
+@media screen and (max-width:680px){
+    aside{
+        display: none;
+    }
+    #showslisting{
+        background-color: chartreuse;
+        /* width: 100%; */
+    }
+    .showdescription{
+        display: none;
+    }
+}
+section.showslisting{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin-bottom: 25px;
+}
+
+/* Media queries for moblile devices */
+@media screen and (max-width:680px), screen and(orientation:landscape) and(max-width:750px){
+    aside{
+        display: none;
+    }
+    #showslisting{
+        /* width:100%; */
+    }
+}
+.container{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1180px;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.row,
+.column {
+box-sizing: border-box;
+}
+.row:before,
+.row:after {
+content: " ";
+display: table;
+}
+.row:after {
+clear: both;
+}
+.column {
+position: relative;
+float: left;
+}
+.column + .column {
+margin-left: 1.6%;
+}
+
+.column-1 {
+width: 6.86666666667%;
+}
+.column-2 {
+width: 15.3333333333%;
+}
+.column-3 {
+width: 23.8%;
+}
+.column-4 {
+width: 32.2666666667%;
+}
+.column-5 {
+width: 40.7333333333%;
+}
+.column-6 {
+width: 49.2%;
+}
+.column-7 {
+width: 57.6666666667%;
+}
+.column-8 {
+width: 66.1333333333%;
+}
+.column-9 {
+width: 74.6%;
+}
+.column-10 {
+width: 83.0666666667%;
+}
+.column-11 {
+width: 91.5333333333%;
+}
+.column-12 {
+width: 100%;
+}
+
+section.tvshow {
+    height: auto;
+    width: 200px;
+}
+
+nav { order: 1;}
+header { order: 2;}
+main { order: 3;}
+footer { order: 4;}
+
+/* Start of Making the web page mobile first */
+/* aside {
+    display: none;
+}
+#showslisting {
+    margin-bottom: 25px;
+    width: 100%;
+}
+.showdescription {
+    display: none;
+} */
+/* End of making the web page mobile first */
